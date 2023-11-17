@@ -1,0 +1,185 @@
+:: StoryTitle
+Textadventure WissKomm
+
+
+:: StoryData
+{
+  "ifid": "E45ED410-F870-4AF9-9680-4226F7B97DA0",
+  "format": "Harlowe",
+  "format-version": "3.3.6",
+  "start": "Start",
+  "zoom": 0.6
+}
+
+
+:: \ Daten Laden {"position":"225,150","size":"100,100"}
+Auf den Berghängen und Hochtälern schwinden die Bäume. Auch Kahlschläge kann man erkennen, das verrät die spektrale Struktur.
+
+Ich gebe die Koordinaten des Zielgebiets ein. Langsam füllt sich der Bildschirm. Da oben die Bergkette, weiter im Süden wird es flacher; das typische Schachbrettmuster aus dichtem Wald und ausgedünnter Vegetation. Aber was ist das?
+
+Eine Große Fläche im Norden meiner Karten fällt mir ins Auge. Die Reflexion des Lichtes, die der Satellit ja nun misst, wenn er ein Bild aufnimmt, hat sich vollkommen verändert; kein Boden, keine Bäume mehr. Gar keine Reflexionen um genau zu sein. Stattdessen ein großer schwarzer Fleck. Das ist an sich nichts ungewöhnliches, normalerweise sehen Gewässer, wie Seen, so aus. Nur war hier vorher kein See. Wie in aller Welt soll ich dass den Morgen der Arbeitsgruppe vorstellen?
+
+Soll ich zuerst die [[Ursprungsdaten]] oder meine [[Berechnungen]] überprüfen?
+
+
+:: 14.09.1769 {"position":"900,400","size":"100,100"}
+Sehr witzig, ich weiß, wann Alexander von Humboldt geboren ist! Ich logge mich ein, suche meinen Ordner und ziehe ihn auf den Stick. Als ich die Dateien später öffne, [[staune ich]].
+
+
+:: 28.08.1749 {"position":"1100,300","size":"100,100"}
+Mist, das Passwort ist falsch. Ah, das Internet informiert mich, ich lag im Monat falsch. ich versuche es mit [[14.09.1769]]
+
+
+:: Berechnungen {"position":"150,300","size":"100,100"}
+Ich muss überprüfen, ob sich irgendwo in meinem Code ein Fehler eingeschlichen hat. Auf den ersten Blick kann ich nichts erkennen. Ich könnte [[Kollegin GH fragen]], ob sie einmal mit mir über den Code gucken kann. Sie ist Spezialistin für XXX. Vielleicht wäre es aber besser, zuerst mal nach dem [[Handbuch]] zu suchen.
+
+
+:: Fachliteratur {"position":"1500,500","size":"100,100"}
+
+
+
+:: Handbuch {"position":"450,375","size":"100,100"}
+Obwohl ich mein Büro von oben bis unten auf den Kopf gestellt habe, konnte ich das Handbuch nicht finden. Wo ist denn nur das verdammte Ding?!
+
+Dann frage ich wohl erstmal meine [[Kollegin GH ->Kollegin GH fragen]].
+
+
+:: Kanadische Wissenschaftler:innen ausfindig zu machen {"position":"550,800","size":"100,100"}
+Ich habe schnell die Internetseite von dem Institut gefunden, die sich um den Zustand des Waldes kümmern. "Über die Pfingstferien geschlossen" steht da, die Nachrichten werden nicht weitergeleitet. Und Pfingsten war vor einer Woche.
+
+Ich könnte [[nach weiteren Satellitenbildern aus der Region suchen]]. Oder [[meine Betreuerin der Doktorarbeit um Hilfe bitten]]. Oder ob ich doch nochmal meine [[Berechnungen]] überprüfen sollte?
+
+
+:: Kollegin GH Kaffee bringen {"position":"300,675","size":"100,100"}
+GH liegt mit dem Kopf auf der Tischplatte und schnarcht leise. Vorsichtig setze ich ihre Kaffeetasse vor ihr ab und hoffe dass der Geruch sie aufweckt bevor er kalt wird. Ich schleiche mich aus dem Raum und schließe die Tür. Ich möchte sie doch nicht aufwecken, müde Personen geben eh schlechten Rat. Dann sollte ich wohl erstmal selber [[die Berechnungen überprüfen->nach dem Fehler]]
+
+
+:: Kollegin GH fragen {"position":"600,300","size":"100,100"}
+GH ist auch noch in ihrem Büro und sagt scherzhaft "Als Gegenleistung holst du mir aber einen Kaffee!"
+Verständlich, ohne Koffein funktioniert hier niemand reibungslos. Ich wollte mir sowieso selber einen machen, es fühlt sich an als würde es ein langer Abend werden.
+
+In der Teeküche am Ende des Flurs gibt es eine Kaffeemaschine die in den meisten Fällen trinkbares Gebräu produziert. Über die anderen Fälle möchte ich nicht zu lange nachdenken.
+Schaudernd vertreibe ich die Erinnerungen an eine Arbeitsgruppe unter Koffeinentzug und fülle den Wassertank auf. Ich drücke den Knopf für doppelten Espresso, aber die Maschine reagiert mit einem energischen Piepsen, die Bohnen sind alle.
+
+Wenn ich zu GH [[ohne Kaffee zurückkehre]], riskiere ich, dass nicht ganz bei der Sache ist. Um neuen Kaffee zu holen, muss ich aber [[in die Verwaltung]]. Das ist manchmal ganz schön anstrengend und zeitraubend...
+
+
+:: Luft und Raumfahhrt {"position":"1500,300","size":"100,100"}
+
+
+
+:: Messapparat {"position":"1500,100","size":"100,100"}
+
+
+
+:: Prof. F {"position":"1100,500","size":"100,100"}
+Meine Betreuerin gibt mir die Nummer, zum Glück eine Handynummer. Er geht direkt ran. "Einen See, denn ich nicht kenne, den gibt es gar nicht", sagt er und ich denke: Der will ein Wissenschaftler sein? Ich behalte meine Zweifel für mich und frage ihn, ob er nicht trotzdem einen See kennt, der sich in kurzer Zeit gebildet hat. "Ich bin eigentlich Geologe, in meinem Fach geht es eher um größere Zeiträume". Soll ich ihn tortzdem bitten, für mich einmal [[in seinen Computer zu schauen]]? Oder direkt [[nach einem Ranger]] fragen, der vor Ort arbeitet?
+
+
+:: Start {"position":"75,150","size":"100,100"}
+Ich sitze im Doktorandenbüro und schaue betrübt auf die Uhr. Schon nach sechs. Morgen Nachmittag muss ich meine Präsentation vorstellen: Landnutzung in einem ursprünglichen Waldgebiet. Das geht nur mit Satellitenbildern, denn in eine solche Wildnis verirren sich höchstens mal ein paar Holzfäller und Jäger. Gut, und seit neuerem manchmal auch Bohrtrupps, die nach Gasvorkommen suchen. 
+
+Die meisten Daten habe ich zum Glück schon gesichtet, aber es geht mir auch um die kürzlicheren Entwicklungen.
+
+Ich [[lade die neuen Daten zum inspizieren --> Daten Laden]]
+
+
+:: Ursprungsdaten {"position":"400,100","size":"100,100"}
+An dieser Universität herrscht Chaos in den Betriebssystemen und Berechtigungen. Um an die ursprünglichen Daten zu kommen, muss ich mich erstmal [[auf dem Computer meines Kollegen im Nebenbüro einloggen ->anderen Computer]]
+
+
+:: anderen Computer {"position":"600,150","size":"100,100"}
+Ich gebe das Passwort ein: falsch. Nochmal, wieder falsch. Hat der etwa den Code verändert?
+
+Ich klopfe im Nebenbüro an, aber erhalte keine Antwort. Es ist abgeschlossen, ich schätze ich muss ihn anrufen, aber soll ich ihn nur [[um das Passwort bitten]] oder ihm [[von meiner Entdeckung erzählen]]? Wenn es am Ende ein spannenden Grund für diese Anomalie gibt, möchte ich es vielleicht erstmal für mich behalten. Andererseits ist ein zweites paar Augen immer hilfreich.
+
+
+:: in die Verwaltung {"position":"425,600","size":"100,100"}
+Die Verwaltung ist in der ersten Etage. Puh, die vielen Stufen sind ganz schön anstregend. Ich sollte vielleicht mal wieder anfangen, zu joggen... 
+
+Die Tür zur Verwaltung steht offen, aber ich klopfe vorsichtig an den Rahmen. Es ist ein Wunder das überhaupt noch jemand hier ist, normalerweise sind alle pünktlich um sechzehn Uhr weg.
+"Hallo? Ich bräuchte eine Tüte von den Espressobohnen, wir sind schon wieder aus."
+Die Verwaltungskraft reckt müde den Kopf hinter den riesigen Stapeln aus Büchern und Dokumenten hervor und rümpft missbilligend die Nase. 
+"Guten Abend, ihr wisst schon dass jede Tüte Kaffeverbrauch einen neuen Erstattungsantrag bedeutet? Warte kurz hier.", sagt sie und verschwindet im Hinterzimmer.
+
+Als sie nach einigen Minuten noch nicht wieder da ist, beginne ich mich zu langweilen und sehe mir die Bücherstapel genauer an. Das eine Buch kommt mir irgendwie so bekannt vor... Jackpot, ich habe mein Coding Handbuch gefunden! Jetzt kann ich alleine [[nach dem Fehler]] in meinen Berechnungen suchen!
+
+Allerdings wartet GH sicher auf mich und den Kaffee, ich sollte ihn ihr [[trotzdem bringen->Kollegin GH Kaffee bringen]].
+
+
+:: in seinen Computer zu schauen {"position":"1200,700","size":"100,100"}
+"Wenn ich heute Abend  zu Hause bin, schaue ich mir die aktuellen Daten im PC an", sagte er, ich soll ihm die Koordinaten des Gebiets schicken.  Toll, dann ist bei mir schon tiefe Nacht. Das hilft mir nicht weiter.
+Ich frage ob er mich mit jemanden [[in Verbindung setzen->nach einem Ranger]] kann der das Gebiet vielleicht in Person kennt.
+
+
+:: meine Betreuerin der Doktorarbeit um Hilfe bitten {"position":"900,600","size":"100,100"}
+Prof. D sitzt tatsächlich noch an ihrem Schreibtisch. "Ein ganzer Wald ist verschwunden, und jetzt ist dort vielleicht ein See?". Sie schaut mich an - nicht ohne Neugierde. "Das muss doch jemand gemerkt haben. Da drüben ist jetzt später Vormittag; ruf mal [[Prof. F]] an und berufe dich auf mich, wenn jemand etwas weiß, dann er!"
+
+
+:: morgen der Arbeitsgruppe zu präsentieren {"position":"1300,300","size":"100,100"}
+"Bist du gestern noch fertig geworden?", fragt meine Kollegin GH und setzt sich zu mir und und unserem anderen Komilitonen. Inzwischen hat sich mein Mysterium in der Gruppe herumgesprochen.
+"Nicht zufriedenstellend", antworte ich und klicke auf meinem Laptop herum bis ich es schaffe meine Folien auf dem Beamer für alle sichtbar zu machen.
+Meine Doktormutter kommt als letzte in den Raum und wir beginnen mit dem Arbeitsgruppenmeeting.
+
+"Wenn du alles so überprüft hast, wie du berichtet hast", sagt Professorin DM nach meinem Vortrag, "Dann bleibt doch eigentlich nichts anderes übrig als auf den Bericht der Rangerin in den nächsten paar Tagen zu warten und ansonsten dich mit dem Satelliten zu beschäftigen."
+"Wie meinen Sie das, mit dem Satelliten beschäftgen?", frage ich.
+"Nun, erstmal solltest du herausfinden, welcher Satellit genau diese Daten aufgenommen hat. Gibt es vielleicht schon Fachliteratur über solche Fehler bei Satelliten? Velleicht findest du ja eine andere Arbeitsgruppe die interessiert daran wäre mit uns zusammen zu arbeiten und die Resultate in eine Veröffentlichung zu verwandeln."
+Sie schaut mich nachdenklich an und ergänzt, "Ich suche dir gleich mal einen Namen raus, ich bilde mir ein, auf einer Konferenz mal mit jemandem von der Luft- und Raumfahrttechnik gesprochen zu haben."
+"Lohnt es sich vielleicht auch mit jemandem von der Messtechnik zu reden?", fragt GH.
+"Du meinst wegen den Messgeräten auf dem Satelliten selber?", frage ich zurück.
+"Ja, ich denke die Luft- und Raumfahrttechnik kann dir vielleicht was über den Orbit und die Datenübertragung des Satelliten sagen, aber wie genau die Bilder aufgenommen werden ist ja auch eine mögliche Quelle für diesen Schein-See".
+Professorin DM macht ein zustimmendes Geräusch und damit ist die Diskusison erstmal abgeschlossen.
+
+Während die anderen ihren Arbeitsfortschritt präsentieren, mache ich mir eine Liste der neuen Ansätze und überlege womit ich anfangen sollte. Ich könnte:
+- [[mich mit der Person aus der Luft- und Raumfahrttechnik in Verbindung setzten->Luft und Raumfahhrt]]
+- [[Nach jemanden recherchieren der sich mit dem Messapparat des Satelliten auskennt->Messapparat]]
+- [[Nach Fachliteratur suchen, die einen solchen Fehler beschreibt->Fachliteratur]] (Dass ich das nicht shcon vorher gemacht habe ist fast peinlich, aber es war wirklich spät gestern)
+
+
+:: nach dem Fehler {"position":"250,450","size":"100,100"}
+Zurück im Büro mache ich mich sofort an die Arbeit. Ich überprüfe die Berechnungen und den Code der letzten Tage mithilfe des Handbuchs. Leider (oder zum Glück) kann ich nichts finden. Dann sollte ich mich doch die [[Ursprungsdaten]] nochmal ansehen.
+
+
+:: nach einem Ranger {"position":"1300,500","size":"100,100"}
+Tatsächlich, ihm fällt jemand ein, der dort draußen ist. Wenn da so etwas spektakuläres passiert ist, dann hätte sie ihm sicher schon selbst berichtet, ergänzt er noch und macht mir richtig Mut! Egal, in Kanada ist es jetzt um Mittag rum, also kann ich anrufen. Mir gehen sonst langsam die Alternativen aus.
+
+Ich lass es klingeln, und die Frau antwortet tatsächlich. Sie klingt sofort sympathisch.
+Ich schildere ihr mein Problem und sie ist etwa genau so ratlos wie ich. Erst vor ein paar Wochen war sie in der Gegend und zu der Zeit war dort sicherlich kein See, berichtet sie mir. In ein paar Tagen würde eine weitere Sichtung der Gegend für einen Bohrtrupp stattfinden, aber ihr wäre auch kein Grund bewusst wie so ein See einfach entstehen sollte.
+Wir tauschen Email-Adressen aus und sie verspricht mir mich auf dem Laufenden zu halten bevor wir auflegen.
+
+Das war zwar eine ausgesprochen nette Unterhaltung aber leider wieder eine Sackgasse.
+Ich lehne mich auf meinem Stuhl zurück und starre die Decke an. Je mehr mögliche Erklärungen ich verfolge, desto unklarer wird mir die eigentliche Sache selber.
+
+Es ist inzwischen schon zu spät um noch irgendwen anderes zu fragen und ich habe keinen neuen Ansatz. Also bleibt mir nichts anderes übrig als meine bisherigen Ergebnisse zusammen zu fassen und [[morgen der Arbeitsgruppe zu präsentieren]]. So wie sie eben sind.
+
+
+:: nach weiteren Satellitenbildern aus der Region suchen {"position":"825,775","size":"100,100"}
+Ich suche online nach weiteren, möglichst aktuellen Satellitenbildern aus der Region. Aber auch die ganz neuen zeigen alle nicht diesen schwarzen Bereich...
+
+Ich sollte wohl [[meine Betreuerin der Doktorarbeit um Hilfe bitten]].
+
+
+:: ohne Kaffee zurückkehre {"position":"700,450","size":"100,100"}
+Ich gehe zurück in das Büro von GH will ihr die schlechte Nachricht überbringen, da sehe ich, dass sie am Schreibtisch eingeschlafen ist. Sie sieht so friedlich aus... Aber sie hat auch eine dringende Frist und für Schlaf keine Zeit. Am besten ich trotte doch [[in die Verwaltung]] und hole uns Kaffee.
+
+
+:: staune ich {"position":"700,600","size":"100,100"}
+Genau dort, wo jetzt kaum noch Infrarot-Reflexe erscheinen, war noch vor 2 Wochen ein dichter Wald. Kein Zweifel, es muss sich um unberührte Natur gehandelt haben. Jetzt war sie verschwunden. Haben denn die Kolleg:innen in Kanada gar nichts davon mitbekommen, oder hat mein Kollege recht: ein technischer Fehler?
+
+Soll ich lieber erstmal alleine recherchieren? Ich könnte [[nach weiteren Satellitenbildern aus der Region suchen]]. Oder [[meine Betreuerin der Doktorarbeit um Hilfe bitten]]? Sie kennt aus früheren Projekten Wissenschaftler:innen in Kanada. Es ist jetzt schon 18.00 Uhr. Um diese Zeit könnte sie noch in ihrem Büro sein. Ansonsten könnte ich versuchen, selbst [[Kanadische Wissenschaftler:innen ausfindig zu machen]]. Oder ob ich doch nochmal meine [[Berechnungen]] überprüfen sollte?
+
+
+:: um das Passwort bitten {"position":"900,200","size":"100,100"}
+Ich rufe ihn an. Er geht ran und antwortet gewohnt umständlich; diesmal mit einer Wissensfrage: Ok, der neue Code ist das Geburtsdatum von Alexander von Humboldt, das kennst Du sicher, oder? Ich mach es Dir leicht: Ist es der [[28.08.1749]] oder der [[14.09.1769]]?
+
+
+:: von meiner Entdeckung erzählen {"position":"750,250","size":"100,100"}
+Ich rufe ihn an und erzähle ihm von meiner merkwürdigen Entdeckung. 
+
+"Hast du vielleicht einen Fehler beim Hochladen gemacht? ist deine Datei irgendwie korrumpiert?", fragt er mich ein wenig hochnäsig.
+"Das habe ich natürlich als erstes überprüft", antworte ich, obwohl das nicht so ganz stimmt.
+"Dann liegt es vielleicht am Satelliten? Du könntest mal ein wenig rum fragen ob das öfter vorkommt, aber ihc habe da noch nicht von gehört.."
+"Ja mal gucken, kannst du mir erstmal Zugang zu deinem Rechner verschaffen,? Die älteren Daten sagen bestimmt etwas aus."
+Er gibt mir den Code und bittet mich, ihn auf dem Laufenden zu halten bevor er auflegt.
+
+Über das Institutsnetzwerk logge ich mich extern auf seinem Rechner ein und [[öffne die Daten ->staune ich]]

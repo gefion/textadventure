@@ -1,4 +1,5 @@
-import world
+#import world
+import worldmap
 
 class Player:
     def __init__(self):
@@ -10,16 +11,13 @@ class Player:
         for item in self.inventory:
             print('* ' + str(item))
 
-    def walk(self,room):
+    def walk(self, place):
         #need to see whether or not it accsessible -- via map
-        
-        if isinstance(room, world.Room): #or issubclass() ? 
-            print("Ich trete ein.")
-            self.location = room
-            print(self.location.name)
-            print(self.location.description)
-        else:
-            print("Dort kann ich nicht eintreten.")
+        #place should be a diciotnary entry in worldmap object Welt
+
+        self.location = place.key
+        print(place.name)
+        print(place.description)
 
 
     def take(self,item):

@@ -59,7 +59,7 @@ class Openable:
             print("Die Tür ist schon offen.")
 
     def close(self):
-        if seld.status == "auf":
+        if self.status == "auf":
             print("Ich schließe die Tür.")
             self.status = "zu"
         else:
@@ -133,7 +133,7 @@ class Buero(Room):
         self.name = "Büro"
         self.key = "Buero"
         self.description = "Das Büro in dem ich arbeite. Es liegt im Keller der Universität und hausiert die drei Doktoranden in unserer Arbeitsgrupppe, sowie hin und wieder Studierende unterer Semester die an Bachelor oder Masterarbeiten arbeiten. Es stehen vier Schreibtische an den Wänden und es gibt nur eine Tür zum Flur."
-        self.scene = [Data(),Stift(),Schreibtische()]
+        self.scene = ["Daten","Stift","Schreibtische"]
         self.doors = ["AbstellkammerBuero","FlurBuero"]
 
 class Flur(Room):
@@ -180,9 +180,9 @@ class AbstellkammerBuero(Openable):
     
     
 
-class Data(Thing):
+class Daten(Thing):
     def __init__(self):
-        self.name = "Data"
+        self.name = "Daten"
         self.key = self.name
         self.description_first = "Landschaftsdaten von einem entlegenen Ort in Nordsibirien. Die Gegend ist geprägt von wilder Natur, eineigen Weidewiesen und ein wenig Agrarlandschaft.\nAußerdem gibt es einen besonders großen See der mir auf den Daten vom Vohrjahr nicht aufgefallen ist. Zumindest den Spektraldaten nach sollte es ein See sein. Ich suche im Institusserver nach besagten Daten vom Vorjahr bis ich sehe dass meine Kollegin Martina sie mit einem Passwort geschützt hat. Ich werde sie fragen müssen."
         self.description = "Da ist ein See in meinen Daten der vorher nicht da war, wie kommt auf einmal so viel Wasser in eine Gegend wo eigentlich keines war? Ich muss dringend Martina nach dem Passwort fragen um mir die Daten des Vorjahres an zu sehen."
@@ -209,7 +209,7 @@ class Schreibtische(Scene):
     def __init__(self):
         self.name = "Schreibtische"
         self.key = self.name
-        self.description = "Zwei der Schreibtische gehören den anderen beiden Doktoranden in der Arbeitsgruppe, Martina und Hakim. Einer ist gerade frei, aber wird normalerweise von Studierenden benutzt die ihre Bachelor oder Masterarbeiten schreiben. Auf Martinas Schreibtisch liegt ein einsamer Kugelschreiber."
+        self.description = "Zwei der Schreibtische gehören den anderen beiden Doktoranden in der Arbeitsgruppe, Martina und Pierre. Einer ist gerade frei, aber wird normalerweise von Studierenden benutzt die ihre Bachelor oder Masterarbeiten schreiben. Auf Martinas Schreibtisch liegt ein einsamer Kugelschreiber."
 
 
 def idontunderstand():
