@@ -1,0 +1,44 @@
+Action_verbalias = dict(
+    lookat = ["schauen","sehen","ansehen","anschauen","gucken","angucken","seh","schau", "Schau","Seh","gucken","guck","Guck"],
+    take = ["nehmen","nimm"],
+    goto = ["gehen","eintreten","tritt","Tritt","treten","geh"],
+    open = ["öffnen","aufmachen","oeffnen","öffne","oeffne"],
+    close = ["schließen","schließe","schliessen","schliesse"],
+    talkto = ["reden","sprechen"],
+    giveto = ["geben"],
+    use = ["benutze"],
+    usewith = ["benutze"]
+)
+
+def player_action(command,availableworld,Karte,Welt,player):
+
+    #parsing
+    doc = nlp(command)
+    doc.sentences[0].print_dependencies()
+    s,v,o = SVOfinder(doc)
+
+    #unravelling all of the available things back into categories
+    items,doors,rooms,stuff = availableworld
+
+    #getting the object class name from the alias that was used
+    subj = "NAN"
+    obj = "NAN"
+    if len(s)>0:
+        subj = worldmap.checkaliases(s[0].text,Welt)
+    if len(o)>0:
+        obj = worldmap.checkaliases(o[0].text,Welt)
+
+    #check if I know the action
+    action == "NAN"
+    for x in Action_verbalias:
+        if (v.text in Action_verbalias[x]) and or (v.lemma in Action_verbalias[x]):
+            action = x
+            print("Ich kenne diese Aktion, es ist "+str(x))
+        else:
+            print("Diese Aktion kenne ich nicht, versuche es mit einer der erlaubten Aktionen HIER NOCH AKTIONEN EINFÜGEN!!")
+            return
+
+    #if this is true, the input is probably useless
+    if (subj=="NAN" and or obj=="NAN")
+        print("Das habe ich nicht verstanden, versuch es nochmal")
+        return

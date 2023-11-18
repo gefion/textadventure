@@ -72,7 +72,9 @@ def createworld():
 
 def visibleworld(Karte, Welt, loc):
     items = Welt[loc].scene
+    
     doors = Karte.tell_doors(loc)
+    
     rooms = [loc]
 
     for a in Karte.doors:
@@ -84,3 +86,14 @@ def visibleworld(Karte, Welt, loc):
 
     return items,doors,rooms,items + doors + rooms
 
+#a function to check all the classes in the world and see if the mystery word at hand matches any of their aliases, then returning the key of it
+
+
+def checkaliases(mysterything,Welt):
+    res = mysterything
+    for x in Welt:
+        for i in Welt[x].aliases:
+            if mysterything == i:
+                res = Welt[x].key
+    return res
+    

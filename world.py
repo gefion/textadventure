@@ -132,6 +132,7 @@ class Buero(Room):
     def __init__(self):
         self.name = "Büro"
         self.key = "Buero"
+        self.aliases = ["Büro","Buero","büro","buero"]
         self.description = "Das Büro in dem ich arbeite. Es liegt im Keller der Universität und hausiert die drei Doktoranden in unserer Arbeitsgrupppe, sowie hin und wieder Studierende unterer Semester die an Bachelor oder Masterarbeiten arbeiten. Es stehen vier Schreibtische an den Wänden und es gibt nur eine Tür zum Flur."
         self.scene = ["Daten","Stift","Schreibtische"]
         self.doors = ["AbstellkammerBuero","FlurBuero"]
@@ -140,6 +141,7 @@ class Flur(Room):
     def __init__(self):
         self.name =  "Flur"
         self.key = self.name
+        self.aliases=["Flur","flur"]
         self.description = "Der Flur unserer Arbeitsgruppe. Es gibt keine Fenster und ein Ende des Flurs ist seit einigen monaten tiefschwarz weil die Glühbirne fehlt. Wenn man durch läuft findet man irgendwann die Teeküche. Am anderen Ende ist die Tür zum Büro unserer Arbeitsgruppenleiterin. Daneben ist die Tür des Sektretariats, unter ihr schimmert ein wenig Licht"
         self.scene = []
         self.doors = ["FlurBuero"]
@@ -148,6 +150,7 @@ class Abstellkammer(Room):
     def __init__(self):
         self.name = "Abstellkammer"
         self.key = self.name
+        self.aliases = ["Abstellkammer","Kammer","abstellkammer","kammer"]
         self.description = "Büromaterialien, einige Kaputte Stühle, Ordner mit kryptischen Namen und eine verstaute Garnitur von Bettzeug."
         self.scene = ["AbstellkammerBuero"]
 
@@ -156,6 +159,7 @@ class FlurBuero(Openable):
     def __init__(self):
         self.name = "Tür zwischen Büro und Flur"
         self.key = "FlurBuero"
+        self.aliases = ["FlurBüro","Tür zwischen FLur und Büro","Tür zwischen Büro und Flur"]
         self.description = "Da ist nichts besonderes zu sehen, es ist nur eine Tür."
         self.status = "zu"
 
@@ -164,6 +168,7 @@ class AbstellkammerBuero(Openable):
     def __init__(self):
         self.name = "Tür zur Abstellkammer"
         self.key = "AbstellkammerBuero"
+        self.aliases = [self.name,self.key]
         self.description = "Jemand hat Eine Postkarte aus Spanien aufgehangen. Dem Vergilbungsgrad nach zu urteiln war das vor mindestens fünf Jahren."
         self.status = "zu"
 
@@ -184,6 +189,7 @@ class Daten(Thing):
     def __init__(self):
         self.name = "Daten"
         self.key = self.name
+        self.aliases= ["Datum","daten","Daten"]
         self.description_first = "Landschaftsdaten von einem entlegenen Ort in Nordsibirien. Die Gegend ist geprägt von wilder Natur, eineigen Weidewiesen und ein wenig Agrarlandschaft.\nAußerdem gibt es einen besonders großen See der mir auf den Daten vom Vohrjahr nicht aufgefallen ist. Zumindest den Spektraldaten nach sollte es ein See sein. Ich suche im Institusserver nach besagten Daten vom Vorjahr bis ich sehe dass meine Kollegin Martina sie mit einem Passwort geschützt hat. Ich werde sie fragen müssen."
         self.description = "Da ist ein See in meinen Daten der vorher nicht da war, wie kommt auf einmal so viel Wasser in eine Gegend wo eigentlich keines war? Ich muss dringend Martina nach dem Passwort fragen um mir die Daten des Vorjahres an zu sehen."
         self.objective = "Martinas Passwort für den Ordner mit der Daten des Vorjahres heraus finden"
@@ -202,6 +208,7 @@ class Stift(Thing):
     def __init__(self):
         self.name = "Stift"
         self.key =self.name
+        self.aliases=["Stift","stift","Kugelschreiber","kugelschreiber","Stifte","stifte","Kulli","kulli"]
         self.description = "Ein normaler Kugelschreiber."
 
 
@@ -209,6 +216,7 @@ class Schreibtische(Scene):
     def __init__(self):
         self.name = "Schreibtische"
         self.key = self.name
+        self.aliases = ["Schreibtische","schreibtische","Schreibtisch","schreibtisch"]
         self.description = "Zwei der Schreibtische gehören den anderen beiden Doktoranden in der Arbeitsgruppe, Martina und Pierre. Einer ist gerade frei, aber wird normalerweise von Studierenden benutzt die ihre Bachelor oder Masterarbeiten schreiben. Auf Martinas Schreibtisch liegt ein einsamer Kugelschreiber."
 
 
