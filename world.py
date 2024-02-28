@@ -1,4 +1,5 @@
 import random
+import time
 
 class Room:
     def __init__(self):
@@ -25,7 +26,7 @@ class Room:
     def talkto(self):
         print("Ich rede lieber mit mir selber als mit dem Raum.")
         
-    def give(self,npc):
+    def giveto(self,npc):
         print("Das kann ich nicht geben.")
 
     
@@ -42,7 +43,7 @@ class Openable:
         if self.status == "zu":
             print("Wird geöffnet!")
             self.status = "auf"
-        if self.status == "auf":
+        elif self.status == "auf":
             print("Wird geschlossen")
             self.status = "zu"
         else:
@@ -68,7 +69,7 @@ class Openable:
     def talkto(self):
         print("\"Mit dir zu sprechen ist wie mit einer Wand zu reden!\"")
         
-    def give(self,npc):
+    def giveto(self,npc):
         print("Das kann ich nicht geben.")
 
 
@@ -97,7 +98,7 @@ class Thing:
     def talkto(self):
         print("Keine Antwort. Seltsam.")
         
-    def give(self,npc):
+    def giveto(self,npc):
         print("Nein, das mache ich lieber nicht.")
 
 class Scene: #only lookable
@@ -124,7 +125,37 @@ class Scene: #only lookable
     def talkto(self):
         print("Keine Antwort. Seltsam.")
         
-    def give(self,npc):
+    def giveto(self,npc):
+        print("Nein, das mache ich lieber nicht.")
+
+class NPC: #non player characters, lots of dialogue options
+    def __init__(self):
+        raise NotImplementedError("Erstelle kein leeres Thing Objekt")
+    def __str__(self):
+        return self.name
+    
+    def lookat(self):
+        print(self.description)
+
+    def use(self):
+        print("Menschen sollte man nicht benutzen. Das wurde mir von Kindesbeinen an beigebracht. Wobei ich höre dass es in der Hinsicht in der anderen Arbeitsgruppe Probleme gibt.")
+    
+    def usewith(self,item):
+        print(idontunderstand())
+        
+    def open(self):
+        print("Es geht nicht auf.")
+
+    def close(self):
+        print("Es geht nicht zu.")
+            
+    def talkto(self):
+        print("Hallo!")
+        print("...")
+        print("Keine Antwort")
+        
+        
+    def giveto(self,npc):
         print("Nein, das mache ich lieber nicht.")
 
 
@@ -133,8 +164,8 @@ class Buero(Room):
         self.name = "Büro"
         self.key = "Buero"
         self.aliases = ["Büro","Buero","büro","buero"]
-        self.description = "Das Büro in dem ich arbeite. Es liegt im Keller der Universität und hausiert die drei Doktoranden in unserer Arbeitsgrupppe, sowie hin und wieder Studierende unterer Semester die an Bachelor oder Masterarbeiten arbeiten. Es stehen vier Schreibtische an den Wänden und es gibt nur eine Tür zum Flur."
-        self.scene = ["Daten","Stift","Schreibtische"]
+        self.description = "Das Büro in dem ich arbeite. Es liegt im Keller der Universität und hausiert die drei Doktoranden in unserer Arbeitsgrupppe, sowie hin und wieder Studierende unterer Semester die an Bachelor oder Masterarbeiten arbeiten. Es stehen vier Schreibtische an den Wänden und es gibt eine Tür zum Flur. Eine andere Tür führt zu einer kleinen Abstellkammer.\nAn einem der Schreibtische sitzt Katrin, meine Kollegin."
+        self.scene = ["Daten","Stift","Schreibtische","Postkarte","Katrin"]
         self.doors = ["AbstellkammerBuero","FlurBuero"]
 
 class Flur(Room):
@@ -150,8 +181,8 @@ class Abstellkammer(Room):
     def __init__(self):
         self.name = "Abstellkammer"
         self.key = self.name
-        self.aliases = ["Abstellkammer","Kammer","abstellkammer","kammer"]
-        self.description = "Büromaterialien, einige Kaputte Stühle, Ordner mit kryptischen Namen und eine verstaute Garnitur von Bettzeug."
+        self.aliases = ["Abstellkammer","Kammer","abstellkammer","kammer","Abstellraum","abstellraum"]
+        self.description = "Büromaterialien, einige kaputte Stühle, Ordner mit kryptischen Namen und eine verstaute Garnitur von Bettzeug."
         self.scene = ["AbstellkammerBuero"]
 
 
@@ -171,21 +202,54 @@ class AbstellkammerBuero(Openable):
         self.aliases = [self.name,self.key]
         self.description = "Jemand hat Eine Postkarte aus Spanien aufgehangen. Dem Vergilbungsgrad nach zu urteiln war das vor mindestens fünf Jahren."
         self.status = "zu"
+        self.locked = "zu"
 
 
     def use(self):
-        print("Es ist abgeschlossen.")
+        if self.locked == "zu":
+            print("Es ist abgeschlossen.")
+        else:
+            if self.status == "zu":
+                print("Wird geöffnet!")
+                self.status = "auf"
+            elif self.status == "auf":
+                print("Wird geschlossen")
+                self.status = "zu"
             
     def open(self):
-        print("Es ist abgeschlossen.")
+        if self.locked == "zu":
+            print("Es ist abgeschlossen.")
+        else:
+            if self.status == "zu":
+                print("Ich öffne die Tür.")
+                self.status = "auf"
+            else:
+                print("Die Tür ist schon offen.")
         
 
     def close(self):
-        print("Es ist schon zu.")
+        if self.locked == "zu":
+            print("Es ist sogar abgeschlossen. Zu-er geht es nicht.")
+        else:
+            if self.status == "auf":
+                print("Ich schließe die Tür.")
+                self.status = "zu"
+            else:
+                print("Die Tür ist schon zu.")
+
+    def usewith(self,item,Karte,Welt,player):
+        print("i am in the usewith funciton")
+        if item == "Schluessel":
+            print("ich benutze den Schlüssel")
+            self.locked ="auf" 
+            self.open()
+            player.inventory.remove(Welt[item].name)
+            Karte.update_door_status(Welt[self.key])
+            
     
     
 
-class Daten(Thing):
+class Daten(Scene):
     def __init__(self):
         self.name = "Daten"
         self.key = self.name
@@ -211,6 +275,9 @@ class Stift(Thing):
         self.aliases=["Stift","stift","Kugelschreiber","kugelschreiber","Stifte","stifte","Kulli","kulli"]
         self.description = "Ein normaler Kugelschreiber."
 
+    def use(self):
+        print("Ich brauche etwas worauf ich schreiben kann")
+
 
 class Schreibtische(Scene):
     def __init__(self):
@@ -219,6 +286,76 @@ class Schreibtische(Scene):
         self.aliases = ["Schreibtische","schreibtische","Schreibtisch","schreibtisch"]
         self.description = "Zwei der Schreibtische gehören den anderen beiden Doktoranden in der Arbeitsgruppe, Martina und Pierre. Einer ist gerade frei, aber wird normalerweise von Studierenden benutzt die ihre Bachelor oder Masterarbeiten schreiben. Auf Martinas Schreibtisch liegt ein einsamer Kugelschreiber."
 
+
+class Postkarte(Thing):
+    def __init__(self):
+        self.name = "Postkarte"
+        self.key = self.name
+        self.aliases = ["postkarte","Karte","karte"]
+        self.description = "Auf der einen Seite ist eine pittoreske Gasse zu sehen, mit einem enthusiastischem Schriftzug \"Schöner in Spanien\". Auf der Rückseite steht nur \"Wartet nicht auch mich\", ohne Absender."
+
+    def use(self):
+        print("Niemand wird mir glauben dass ich in Wahrheit gerade in Spanien bin.")
+    def giveto(self,npc):
+        if npc == "Katrin":
+            if npc.status == "talked to": #action only happens if player talked to Katrin before, otherwise they would not know she would like a postcard
+                print("Hier. Hilft das Bild ein bisschen?")
+                return "ok"
+            else:
+                print("Was soll sie denn damit? Ich habe keinen Grund ihr das zu geben")
+            
+class Schluessel(Thing):
+    def __init__(self):
+        self.name = "Schlüssel"
+        self.key = "Schluessel"
+        self.aliases = [self.name,self.key,"schlüssel","schluessel","Schluessel"]
+        self.description = "Ein regulärer Schlüssel"
+
+    def use(self):
+        print("Der Schlüssel allein öffnet nicht die Tür")
+    def usewith(self,item,Karte,Welt,player):
+        if item == "AbstellkammerBuero":
+            Welt[item].locked ="auf" 
+            Welt[item].open()
+            player.inventory.remove(self.name)
+            Karte.update_door_status(Welt[item])
+
+class Katrin(NPC): #non player characters, lots of dialogue options
+    def __init__(self):
+        self.name = "Katrin"
+        self.key = "Katrin"
+        self.aliases = ["katrin"]
+        self.description = "Meine Co-Doktorandin Katrin. Sie sieht so müde aus wie ich mich fühle. Gerade sitzt sie am Tisch und starrt in ihren Kafee."
+    
+    def lookat(self):
+        print(self.description)
+
+    def use(self):
+        print("Was meinst du! Katrin ist zu nett um sie zu \"benutzen\"")
+    
+    def usewith(self,item):
+        print(idontunderstand())
+        
+    def open(self):
+        print("Wenn ich mit ihr rede bekomme ich bestimmt hilfreiche Informationen aus ihr raus")
+
+    def close(self):
+        print("...das ergibt doch keinen Sinn.")
+            
+    def talkto(self):
+        print("Ich: Hey Katrin, wie geht es dir heute")
+        time.sleep(2)
+        print("Katrin: Uff. Der Kafee ist noch nicht im System angekommen")
+        time.sleep(2)
+        print("Ich: Ich könnte den Schlüssel zur Abstellkammer gebrauchen, hast du den zufällig?")
+        time.sleep(2)
+        print("Katrin fängt an in ihrer Schreibtischschublade herum zu wühlen und holt nach einer Weile einen Schlüssel heraus.")
+        print("Katrin: Probier mal den hier, ich glaube das könnte der sein.")
+        return "Schluessel"
+        
+
+
+                
 
 def idontunderstand():
     r = random.random()

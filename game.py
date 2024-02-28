@@ -4,6 +4,7 @@ from collections import OrderedDict
 import worldmap
 import string
 import action
+import world
 
 
 def play():
@@ -21,14 +22,16 @@ def play():
 
         
         #a few extra actions for gameplay ease
-        if action_input in ["Aktion", "Aktionen", "A", "a"]:
-            print("Unter den möglichen Eingaben: benutze, schau an, nimm, gib, öffne, schließe, tritt ein, t, Inventar, i, Aktion, Aktionen, A, a, wo bin ich")
+        if action_input in ["Aktion", "Aktionen", "A", "a","aktionen","Aktion"]:
+            print("Unter den möglichen Eingaben: benutze, schau an, nimm, gib, öffne, schließe, tritt ein, Inventar, i, Aktion, Aktionen, A, a, wo bin ich")
         if action_input in ["Inventar", "i"]:
             player.print_inventory()
 
-        elif action_input in ["wo bin ich", "wo bin ich?"]:
+        elif action_input in ["wo bin ich", "wo bin ich?", "schau dich um", "umschauen","umsehen","sieh dich um","Sieh dich um","Sieh dich um.","sieh dich um.","Schau mich um","Ich schaue mich um","ich schaue mich um","ich schau mich um"]:
             print(Welt[player.location].name)
             print(Welt[player.location].description)
             Karte.print_map()
+        #else:
+        #    world.idontunderstand()
 
 play()

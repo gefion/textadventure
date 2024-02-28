@@ -10,6 +10,7 @@ class Worldmap:
         self.doors.append([room2,room1,name,status])
 
     def update_door_status(self,door):
+        print("i am updating the door status")
         for i in range(len(self.doors)):
             if door in self.doors[i]:
                 if self.doors[i][3] == door.status:
@@ -19,6 +20,7 @@ class Worldmap:
                     self.doors[i][3] = door.status
                 elif self.doors[i][3] == "auf":
                     self.doors[i][3] = door.status
+        print("door status updated")
 
     def tell_doors(self,loc):
         doors = []
@@ -59,7 +61,10 @@ def createworld():
         FlurBuero = world.FlurBuero(),
         Daten = world.Daten(),
         Stift = world.Stift(),
-        Schreibtische = world.Schreibtische()
+        Schreibtische = world.Schreibtische(),
+        Postkarte = world.Postkarte(),
+        Katrin = world.Katrin(),
+        Schluessel = world.Schluessel()
     )
     
 

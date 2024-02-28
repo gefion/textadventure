@@ -1,17 +1,6 @@
+Python based textadventure
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+currently in bare-bones state
 
 
 
